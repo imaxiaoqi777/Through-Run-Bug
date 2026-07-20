@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#111315" />
+    <title>through777 Run Bug</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <header class="topbar">
+        <div class="brand">
+          <span class="status-dot" aria-hidden="true"></span>
+          <div>
+            <strong>through777 RUN BUG</strong>
+            <span>Pixel Girl / 离线模式</span>
+          </div>
+        </div>
+        <div class="scores" aria-label="分数">
+          <span>本局 <b id="score">00000</b></span>
+          <span>最高 <b id="highScore">00000</b></span>
+        </div>
+      </header>
+
+      <section class="game-frame" id="gameFrame">
+        <canvas id="game" width="960" height="420" aria-label="Pixel Girl 跑酷小游戏"></canvas>
+        <div class="scanline" aria-hidden="true"></div>
+        <div class="overlay" id="overlay">
+          <p class="eyebrow" id="overlayEyebrow">READY / 准备运行</p>
+          <h1 id="overlayTitle">跨过每一个 Bug</h1>
+          <p id="overlayText">按空格键、↑ 或点击画面跳跃</p>
+          <button id="startButton" type="button">开始运行 <kbd>SPACE</kbd></button>
+        </div>
+
+        <section class="reward-card" id="rewardCard" aria-live="polite" hidden>
+          <div class="reward-avatar" aria-hidden="true"></div>
+          <div class="reward-copy">
+            <p class="reward-label" id="rewardMilestone">GIRLFRIEND MESSAGE / 01000</p>
+            <h2 id="rewardMessage">今天工作辛苦啦，解决了这么多 Bug。</h2>
+            <p>休息三秒也没关系，我一直在终点等你。</p>
+            <button id="continueButton" type="button">收到，继续修 Bug <kbd>SPACE</kbd></button>
+          </div>
+        </section>
+
+        <section class="proposal-card" id="proposalCard" aria-live="assertive" hidden>
+          <div class="proposal-ring" aria-hidden="true">◇</div>
+          <p class="proposal-label">PERFECT RUN / 10000</p>
+          <h2 id="proposalTitle">你为了这个家好辛苦，咱们结婚吧</h2>
+          <p id="proposalText">一万个 Bug 都没拦住你，以后的关卡想和你一起过。</p>
+          <div class="proposal-actions">
+            <button id="acceptButton" type="button">我愿意 ♥</button>
+            <button id="restartButton" type="button">再跑一局</button>
+          </div>
+        </section>
+        <button class="sound" id="soundButton" type="button" aria-label="切换音效" title="切换音效">音效 ON</button>
+      </section>
+
+      <footer class="helpbar">
+        <span><kbd>SPACE</kbd> 跳跃 / 重开</span>
+        <span><kbd>P</kbd> 暂停</span>
+        <span class="offline">无需联网 · 不消耗 Token</span>
+      </footer>
+    </main>
+    <script src="game.js"></script>
+  </body>
+</html>
